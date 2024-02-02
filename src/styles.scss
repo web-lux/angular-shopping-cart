@@ -137,3 +137,22 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+/* FOOTER */
+
+.footer {
+	background-color: var(--black);
+	display: flex;
+	justify-content: center;
+
+	.credits {
+		font-family: var(--text);
+		color: var(--grey);
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	a {
+		cursor: pointer;
+	}
+}
