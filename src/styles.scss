@@ -1,0 +1,139 @@
+@font-face {
+	font-family: "Bebas Neue";
+	font-style: normal;
+	font-weight: normal;
+	src: local("BebasNueue-Regular"),
+		url("/assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Montserrat-Regular"),
+		url("/assets/fonts/MontserratRegular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: bold;
+	src: local("Montserrat-Bold"),
+		url("/assets/fonts/MontserratBold.otf") format("opentype");
+}
+
+:root {
+	--black: #121212;
+	--red: #9e1e1b;
+	--white: #e6e6e6;
+	--grey: #807f7b;
+	--text: "Montserrat";
+	--title: "Bebas Neue";
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h1,
+h2 {
+	font-weight: normal;
+}
+
+p,
+a,
+span,
+label,
+button,
+input[type="email"] {
+	font-family: var(--text);
+	font-size: 16px;
+}
+
+p,
+a,
+span,
+label {
+	color: var(--white);
+	line-height: 150%;
+}
+
+button,
+input[type="checkbox"] {
+	cursor: pointer;
+}
+
+.max-wrapper {
+	max-width: 1920px;
+	width: 100%;
+	padding: 20px 40px;
+}
+
+.border-bottom {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		height: 3px;
+		background-color: var(--red);
+		width: 100%;
+		bottom: -6px;
+	}
+}
+
+.title {
+	font-family: var(--title), sans-serif;
+	font-size: 50px;
+}
+
+button {
+	border: none;
+	appearance: none;
+	background: none;
+	background-color: none;
+}
+
+.btn {
+	padding: 8px 12px;
+	font-weight: bold;
+
+	&.primary {
+		background-color: var(--red);
+		color: var(--white);
+	}
+
+	&.secondary {
+		border: solid 1px var(--red);
+	}
+}
+
+.btn-quantity {
+	background-color: var(--grey);
+	height: 25px;
+	width: 25px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+}
+
+/* HEADER */
+
+.navbar {
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: "header[app-header]",
   standalone: true,
-  template: `<h1>Header</h1>`,
-  styles: ``,
+  templateUrl: "./header.component.html",
+  styleUrl: "./header.component.scss",
+  imports: [RouterLink],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  cartQuantity = 0;
+}

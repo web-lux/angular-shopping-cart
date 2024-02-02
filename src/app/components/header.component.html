@@ -1,0 +1,29 @@
+<div class="wrapper max-wrapper">
+    <img src="/assets/runzik.svg" alt="Logo Run'zik" />
+
+    <nav aria-label="Navigation principale">
+        <ul>
+            <li>
+                <a routerLink="/" class="border-bottom">
+                    Nos produits
+                </a>
+            </li>
+            <li>
+                <a>Qui sommes nous ?</a>
+            </li>
+            <li>
+                <a>F.A.Q</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <a routerLink="/cart" aria-label="Panier" class="cart">
+            <div class="cart-number">{{ cartQuantity }}</div>
+            <img src="/assets/basket.svg" alt="Panier" />
+        </a>
+        <a aria-label="Compte">
+            <img src="/assets/account.svg" alt="Compte" />
+        </a>
+    </div>
+</div>

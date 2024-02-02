@@ -8,7 +8,6 @@ import { FooterComponent } from './components/footer.component';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'angular-shopping-cart';
