@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { placeholderProducts } from '../placeholderContent';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'main[app-shop]',
   standalone: true,
-  template: `<h1>Shop</h1>`,
-  styles: ``,
+  templateUrl: "./shop.component.html",
+  styleUrl: "./shop.component.scss",
+  imports: [RouterLink]
 })
-export class ShopComponent {}
+export class ShopComponent {
+  products = placeholderProducts;
+}

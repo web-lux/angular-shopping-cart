@@ -1,0 +1,51 @@
+<section>
+    <ul aria-label="Avantages de Run'zik" class="banner">
+        <li>
+            <img src="/assets/truck.svg" alt="" />
+            <span>Livraison gratuite en Europe</span>
+        </li>
+    
+        <li>
+            <img src="/assets/headphone.svg" alt="" />
+            <span>Service après-vente réactif</span>
+        </li>
+    
+        <li>
+            <img src="/assets/shield.svg" alt="" />
+            <span>Garantie 2 ans</span>
+        </li>
+    
+        <li>
+            <img src="/assets/smile.svg" alt="" />
+            <span>Satisfait ou remboursé sous 15 jours</span>
+        </li>
+    </ul>
+</section>
+
+@for (product of products; track product.id) {
+    <section class="item">
+    <div class="max-wrapper wrapper">
+        <div class="main">
+            <strong aria-label="Nom de l'article" class="title border-bottom">
+                {{product.title}}
+            </strong>
+            <p aria-label="Description de l'article">{{product.description}}</p>
+            <span class="price" aria-label="Prix de l'article">
+                {{product.price}}
+            </span>
+            <div class="buttons">
+                <button class="btn primary">
+                    J'ajoute au panier
+                </button>
+                <a routerLink="" class="btn secondary">
+                    Détails de l'article
+                </a>
+            </div>
+        </div>
+
+        <div class="image">
+            <img [src]="product.image" alt="Image de l'article" />
+        </div>
+    </div>
+</section>
+}
