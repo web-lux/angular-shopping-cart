@@ -10,27 +10,31 @@
                         {{ product.price }}
                     </span>
                 </div>
-                <form action="POST">
+                <form action="POST" (submit)="addToCart()">
                     <label for="quantity">Quantité</label>
                     <div class="buttons">
                         <button
                             class="btn-quantity"
                             type="button"
+                            (click)="decreaseQuantity()"
                         >
                             -
                         </button>
                         <input
+                            name="quantity"
                             type="text"
                             id="quantity"
+                            [(ngModel)]="itemQuantity"
                         />
                         <button
                             class="btn-quantity"
                             type="button"
+                            (click)="increaseQuantity()"
                         >
                             +
                         </button>
                     </div>
-                    <button type="button" class="btn primary">
+                    <button type="submit" class="btn primary">
                         J'ajoute au panier
                     </button>
                 </form>
