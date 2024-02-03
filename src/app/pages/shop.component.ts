@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { placeholderProducts } from '../placeholderContent';
 import { RouterLink } from '@angular/router';
+import { ProductService } from '../services/productService';
 
 @Component({
   selector: 'main[app-shop]',
@@ -10,5 +11,6 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink]
 })
 export class ShopComponent {
-  products = placeholderProducts;
+  productService: ProductService = inject(ProductService);
+  products = this.productService.getAllProducts();
 }
