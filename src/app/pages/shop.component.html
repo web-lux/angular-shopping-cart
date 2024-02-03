@@ -34,7 +34,7 @@
                 {{product.price}}
             </span>
             <div class="buttons">
-                <button class="btn primary">
+                <button class="btn primary" (click)="addToCart(product)">
                     J'ajoute au panier
                 </button>
                 <a [routerLink]="['/details', product.id]" class="btn secondary">
