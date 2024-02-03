@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { placeholderProducts } from '../placeholderContent';
 import { RouterLink } from '@angular/router';
 import { ProductService } from '../services/productService';
 
