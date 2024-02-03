@@ -1,0 +1,50 @@
+@if (product) {
+    <section class="wrapper-main">
+        <div class="main max-wrapper">
+            <img [src]="product.image" alt="" />
+    
+            <div class="infos">
+                <div>
+                    <h1 class="title">{{ product.title }}</h1>
+                    <span aria-label="Prix de l'article" class="price">
+                        {{ product.price }}
+                    </span>
+                </div>
+                <form action="POST">
+                    <label for="quantity">Quantité</label>
+                    <div class="buttons">
+                        <button
+                            class="btn-quantity"
+                            type="button"
+                        >
+                            -
+                        </button>
+                        <input
+                            type="text"
+                            id="quantity"
+                        />
+                        <button
+                            class="btn-quantity"
+                            type="button"
+                        >
+                            +
+                        </button>
+                    </div>
+                    <button type="button" class="btn primary">
+                        J'ajoute au panier
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section class="details">
+        <div class="max-wrapper">
+            <h2 class="title">Lorem ipsum</h2>
+    
+            <div class="text">
+                <p>{{ product.description }}</p>
+            </div>
+        </div>
+    </section>
+}

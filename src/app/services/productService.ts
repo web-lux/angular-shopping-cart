@@ -33,7 +33,7 @@ export class ProductService {
         return this.Products;
     }
 
-    getProductByID(id: number): Product | undefined {
+  getProductByID(id: number): Product | undefined {
         return this.Products.find(product => product.id === id);
     };
 }
