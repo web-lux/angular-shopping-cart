@@ -1,3 +1,10 @@
+:host {
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .wrapper {
 	display: flex;
 	align-items: center;
