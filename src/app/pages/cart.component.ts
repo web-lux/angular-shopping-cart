@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { BannerComponent } from '../components/banner.component';
 import { CartService } from '../services/cartService';
-import CartItem from '../interfaces/cartInterface';
 import { CartRowComponent } from '../components/cart-row.component';
+import { BannerComponent } from '../components/banner.component';
+import CartItem from '../interfaces/cartInterface';
 
 @Component({
   selector: 'main[app-cart]',

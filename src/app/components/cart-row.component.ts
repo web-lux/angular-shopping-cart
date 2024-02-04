@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import CartItem from '../interfaces/cartInterface';
 import { CommonModule } from '@angular/common';
+import CartItem from '../interfaces/cartInterface';
 
 @Component({
   selector: '[app-cart-row]',

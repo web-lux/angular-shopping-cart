@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../services/productService';
-import Product from '../interfaces/productInterface';
-import { FormsModule } from '@angular/forms';
-import { CartService } from '../services/cartService';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { ProductService } from '../services/productService';
+import { CartService } from '../services/cartService';
+import Product from '../interfaces/productInterface';
 
 @Component({
   selector: 'main[app-details]',

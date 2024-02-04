@@ -1,11 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { ProductService } from '../services/productService';
-import CartItem from '../interfaces/cartInterface';
-import Product from '../interfaces/productInterface';
 import { CartService } from '../services/cartService';
 import { BannerComponent } from '../components/banner.component';
-import { CommonModule } from '@angular/common';
+import Product from '../interfaces/productInterface';
 
 @Component({
   selector: 'main[app-shop]',
@@ -17,12 +16,12 @@ import { CommonModule } from '@angular/common';
 export class ShopComponent {
   productService: ProductService = inject(ProductService);
   cartService: CartService = inject(CartService);
-  products = this.productService.getAllProducts();
+  products:Product[] = this.productService.getAllProducts();
 
   addToCart(product: Product) {
     // add item in cart only if it isn't there already
     if (!this.cartService.checkIfItemAlreadyInCart(product.id)) {
       this.cartService.addToCart({ ...product, quantity: 1 });
     }
-  }
+  };
 }

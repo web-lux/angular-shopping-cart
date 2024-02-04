@@ -31,7 +31,7 @@ export class ProductService {
     
     getAllProducts(): Product[] {
         return this.Products;
-    }
+    };
 
   getProductByID(id: number): Product | undefined {
         return this.Products.find(product => product.id === id);
