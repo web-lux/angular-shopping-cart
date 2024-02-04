@@ -4,13 +4,14 @@ import { ProductService } from '../services/productService';
 import Product from '../interfaces/productInterface';
 import { FormsModule } from '@angular/forms';
 import { CartService } from '../services/cartService';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'main[app-details]',
   standalone: true,
   templateUrl: "./details.component.html",
   styleUrl: "./details.component.scss",
-  imports: [FormsModule]
+  imports: [FormsModule, CommonModule]
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);

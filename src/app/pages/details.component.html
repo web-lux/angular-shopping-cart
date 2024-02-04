@@ -7,7 +7,7 @@
                 <div>
                     <h1 class="title">{{ product.title }}</h1>
                     <span aria-label="Prix de l'article" class="price">
-                        {{ product.price }}
+                        {{ product.price | currency : "EUR" }}
                     </span>
                 </div>
                 <form action="POST" (submit)="addToCart()">

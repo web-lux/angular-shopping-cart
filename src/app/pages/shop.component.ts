@@ -5,13 +5,14 @@ import CartItem from '../interfaces/cartInterface';
 import Product from '../interfaces/productInterface';
 import { CartService } from '../services/cartService';
 import { BannerComponent } from '../components/banner.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'main[app-shop]',
   standalone: true,
   templateUrl: "./shop.component.html",
   styleUrl: "./shop.component.scss",
-  imports: [RouterLink, BannerComponent]
+  imports: [RouterLink, BannerComponent, CommonModule]
 })
 export class ShopComponent {
   productService: ProductService = inject(ProductService);

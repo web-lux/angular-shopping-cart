@@ -10,7 +10,7 @@
             </strong>
             <p aria-label="Description de l'article">{{product.description}}</p>
             <span class="price" aria-label="Prix de l'article">
-                {{product.price}}
+                {{product.price | currency : "EUR"}}
             </span>
             <div class="buttons">
                 <button class="btn primary" (click)="addToCart(product)">
