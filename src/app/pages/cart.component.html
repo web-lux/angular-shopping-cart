@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <main class="cart max-wrapper">
+        <h1 class="title">Panier</h1>
+
+        @if (cart.length === 0) {
+
+            <div class="content">
+                <p class="empty-message">
+                    Votre panier est vide. <a href="/">Pourquoi ne pas regarder nos articles ?</a>
+                </p>
+            </div>
+
+        } 
+
+        @else {
+            <ul class={style.items}>
+                @for (cartItem of cart; track cartItem.id) {
+                    <li app-cart-row [cartItem]="cartItem" class="cart-row"></li>
+                }
+            </ul>
+        }
+
+        <div class="sum">
+            <span id="sum-label">Sous-total</span>
+            <span aria-labelledby="sum-label">price</span>
+        </div>
+
+        <button class="btn primary btn-next">
+            Renseigner l'adresse
+        </button>
+    </main>
+</div>
+
+<section app-banner></section>

@@ -1,0 +1,10 @@
+  <img [src]="cartItem.image" alt="Image de l'article" />
+  <span class="item-name" aria-label="Nom de l'article">
+     {{ cartItem.title }}
+  </span>
+  <div class="item-quantity">
+    <button class="btn-quantity" aria-label="Réduire quantité">-</button>
+    <span aria-label="Quantité dans le panier">{{ cartItem.quantity }}</span>
+    <button class="btn-quantity" aria-label="Augmenter quantité">+</button>
+  </div>
+  <span class="item-price" aria-label="Prix de l'article"> {{ cartItem.price * cartItem.quantity }} </span>
