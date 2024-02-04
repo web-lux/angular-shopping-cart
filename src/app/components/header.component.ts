@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { CartService } from '../services/cartService';
+import CartItem from '../interfaces/cartInterface';
 
 @Component({
   selector: "header[app-header]",
@@ -9,5 +11,10 @@ import { Router, RouterLink } from '@angular/router';
   imports: [RouterLink],
 })
 export class HeaderComponent {
-  cartQuantity = 0;
+  cartService: CartService = inject(CartService);
+  cart!: CartItem[];
+
+  constructor() {
+    this.cartService.cart$.subscribe((value) => this.cart = value);
+  }
 }
