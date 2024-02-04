@@ -4,13 +4,14 @@ import { ProductService } from '../services/productService';
 import CartItem from '../interfaces/cartInterface';
 import Product from '../interfaces/productInterface';
 import { CartService } from '../services/cartService';
+import { BannerComponent } from '../components/banner.component';
 
 @Component({
   selector: 'main[app-shop]',
   standalone: true,
   templateUrl: "./shop.component.html",
   styleUrl: "./shop.component.scss",
-  imports: [RouterLink]
+  imports: [RouterLink, BannerComponent]
 })
 export class ShopComponent {
   productService: ProductService = inject(ProductService);
