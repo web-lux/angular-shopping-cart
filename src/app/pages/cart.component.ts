@@ -5,13 +5,14 @@ import { CartRowComponent } from '../components/cart-row.component';
 import { BannerComponent } from '../components/banner.component';
 import CartItem from '../interfaces/cartInterface';
 import { UtilsService } from '../services/utils.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'main[app-cart]',
   standalone: true,
   templateUrl: "./cart.component.html",
   styleUrl: "./cart.component.scss",
-  imports: [BannerComponent, CartRowComponent, CommonModule]
+  imports: [BannerComponent, CartRowComponent, CommonModule, RouterLink]
 })
 export class CartComponent {
   cartService: CartService = inject(CartService);
