@@ -19,7 +19,6 @@ export class ShopComponent {
   products:Product[] = this.productService.getAllProducts();
 
   addToCart(product: Product) {
-    // add item in cart only if it isn't there already
     if (!this.cartService.checkIfItemAlreadyInCart(product.id)) {
       this.cartService.addToCart({ ...product, quantity: 1 });
     }
