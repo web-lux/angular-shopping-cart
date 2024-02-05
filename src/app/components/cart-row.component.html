@@ -3,8 +3,8 @@
      {{ cartItem.title }}
   </span>
   <div class="item-quantity">
-    <button class="btn-quantity" aria-label="Réduire quantité">-</button>
+    <button class="btn-quantity" aria-label="Réduire quantité" (click)="decreaseQuantity()">-</button>
     <span aria-label="Quantité dans le panier">{{ cartItem.quantity }}</span>
-    <button class="btn-quantity" aria-label="Augmenter quantité">+</button>
+    <button class="btn-quantity" aria-label="Augmenter quantité" (click)="increaseQuantity()">+</button>
   </div>
   <span class="item-price" aria-label="Prix de l'article"> {{ cartItem.price * cartItem.quantity | currency: "EUR"}} </span>
