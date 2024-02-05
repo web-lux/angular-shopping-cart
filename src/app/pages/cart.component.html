@@ -14,7 +14,7 @@
 
         @else {
             <ul class={style.items}>
-                @for (cartItem of cart; track cartItem.id) {
+                @for (cartItem of cart.sort(utilsService.compareId); track cartItem.id) {
                     <li app-cart-row [cartItem]="cartItem" class="cart-row"></li>
                 }
             </ul>

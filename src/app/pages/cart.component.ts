@@ -4,6 +4,7 @@ import { CartService } from '../services/cart.service';
 import { CartRowComponent } from '../components/cart-row.component';
 import { BannerComponent } from '../components/banner.component';
 import CartItem from '../interfaces/cartInterface';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'main[app-cart]',
@@ -14,6 +15,7 @@ import CartItem from '../interfaces/cartInterface';
 })
 export class CartComponent {
   cartService: CartService = inject(CartService);
+  utilsService: UtilsService = inject(UtilsService);
   cart: CartItem[] = [];
 
   constructor() {
