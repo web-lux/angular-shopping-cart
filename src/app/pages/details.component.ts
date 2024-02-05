@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ProductService } from '../services/productService';
-import { CartService } from '../services/cartService';
+import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service';
 import Product from '../interfaces/productInterface';
 
 @Component({

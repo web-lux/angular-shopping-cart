@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartService } from '../services/cartService';
+import { CartService } from '../services/cart.service';
 import { CartRowComponent } from '../components/cart-row.component';
 import { BannerComponent } from '../components/banner.component';
 import CartItem from '../interfaces/cartInterface';
@@ -17,7 +17,7 @@ export class CartComponent {
   cart: CartItem[] = [];
 
   constructor() {
-    this.cartService.cart$.subscribe((value) => this.cart = value);
+    this.cartService.cart$.subscribe((value) => this.cart = value.sort());
   };
 };
 

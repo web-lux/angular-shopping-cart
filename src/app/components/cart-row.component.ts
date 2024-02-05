@@ -1,7 +1,7 @@
 import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import CartItem from '../interfaces/cartInterface';
-import { CartService } from '../services/cartService'; 
+import { CartService } from '../services/cart.service'; 
 
 @Component({
   selector: '[app-cart-row]',
