@@ -34,7 +34,7 @@
                             +
                         </button>
                     </div>
-                    <button type="submit" class="btn primary">
+                    <button type="submit" class="btn primary" [disabled]="itemQuantity <= 0 ? true : false">
                         J'ajoute au panier
                     </button>
                 </form>
