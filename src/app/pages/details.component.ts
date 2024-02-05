@@ -33,12 +33,14 @@ export class DetailsComponent {
   }
 
   addToCart() {
-    if (this.cartService.checkIfItemAlreadyInCart(this.productID)) {
-      alert("Item already in cart!")
-    } else if (this.itemQuantity <= 0) {
-      alert("Can't add item with a quantity inferior to 1") 
-    } else if (this.product) {
-      this.cartService.addToCart({ ...this.product, quantity: this.itemQuantity })
+    if (this.product) {
+
+      if (this.cartService.checkIfItemAlreadyInCart(this.product.id)) {
+        this.cartService.modifyItemQuantity(this.product.id, this.itemQuantity);
+      } else {
+        this.cartService.addToCart({ ...this.product, quantity: this.itemQuantity })
+      }
+      
     }
   }
 
