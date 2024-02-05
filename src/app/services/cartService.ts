@@ -34,4 +34,14 @@ export class CartService {
             console.error("Cannot modify the quantity of an item not in cart!")
         }
     }
+
+    getCartTotal(): number {
+        const itemTotal: number[] = [];
+
+        this.cartSubject.getValue().map((item) => {
+            itemTotal.push(item.price * item.quantity);
+        });
+
+        return itemTotal.reduce((total, item) => total + item, 0);
+    }
 };

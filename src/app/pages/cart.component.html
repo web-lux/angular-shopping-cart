@@ -22,7 +22,7 @@
 
         <div class="sum">
             <span id="sum-label">Sous-total</span>
-            <span aria-labelledby="sum-label">price</span>
+            <span aria-labelledby="sum-label">{{ cartService.getCartTotal() | currency: "EUR" }}</span>
         </div>
 
         <button class="btn primary btn-next">

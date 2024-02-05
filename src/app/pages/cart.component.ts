@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { CartService } from '../services/cartService';
 import { CartRowComponent } from '../components/cart-row.component';
 import { BannerComponent } from '../components/banner.component';
@@ -9,7 +10,7 @@ import CartItem from '../interfaces/cartInterface';
   standalone: true,
   templateUrl: "./cart.component.html",
   styleUrl: "./cart.component.scss",
-  imports: [BannerComponent, CartRowComponent]
+  imports: [BannerComponent, CartRowComponent, CommonModule]
 })
 export class CartComponent {
   cartService: CartService = inject(CartService);
