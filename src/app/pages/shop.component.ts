@@ -16,7 +16,8 @@ import Product from '../interfaces/productInterface';
 export class ShopComponent {
   productService: ProductService = inject(ProductService);
   cartService: CartService = inject(CartService);
-  products:Product[] = this.productService.getAllProducts();
+
+  products$ = this.productService.getAllProducts();
 
   addToCart(product: Product) {
     if (!this.cartService.checkIfItemAlreadyInCart(product.id)) {

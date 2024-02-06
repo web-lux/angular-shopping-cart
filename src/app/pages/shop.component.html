@@ -1,7 +1,7 @@
 <section app-banner>
 </section>
 
-@for (product of products; track product.id) {
+@for (product of (products$ | async); track product.id) {
     <section class="item">
     <div class="max-wrapper wrapper">
         <div class="main">

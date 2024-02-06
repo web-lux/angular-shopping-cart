@@ -19,7 +19,7 @@ export class DetailsComponent {
   cartService: CartService = inject(CartService);
 
   productID = Number(this.route.snapshot.params["id"]);
-  product: Product | undefined;
+  product !: Product | null;
   itemQuantity = 1;
 
   increaseQuantity() {
@@ -40,11 +40,10 @@ export class DetailsComponent {
       } else {
         this.cartService.addToCart({ ...this.product, quantity: this.itemQuantity })
       }
-      
     }
   }
 
   constructor() {
-    this.product = this.productService.getProductByID(this.productID);
+    this.productService.getProductByID(this.productID).subscribe((value) => this.product = value);
   }
 }
